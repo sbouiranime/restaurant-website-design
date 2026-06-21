@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
-import { Countdown } from "@/components/countdown"
+import { FloatingScene } from "@/components/floating-scene"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -25,6 +25,9 @@ export function ComingSoon() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
       </div>
+
+      {/* Floating themed icons */}
+      <FloatingScene />
 
       {/* Eyebrow */}
       <motion.p
@@ -73,14 +76,28 @@ export function ComingSoon() {
         {"Quelque chose de délicieux mijote à Melun. Bientôt, l'Italie s'invite à votre table."}
       </motion.p>
 
-      {/* Countdown */}
-      <div className="mt-12">
-        <Countdown />
-      </div>
+      {/* Animated "coming soon" badge */}
+      <motion.div
+        custom={4}
+        initial="hidden"
+        animate="show"
+        variants={fadeUp}
+        className="relative mt-12 flex items-center gap-5"
+      >
+        <span className="h-px w-12 bg-primary/40 sm:w-20" />
+        <motion.span
+          animate={{ opacity: [0.55, 1, 0.55], scale: [1, 1.04, 1] }}
+          transition={{ duration: 3.4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          className="font-serif text-2xl uppercase tracking-[0.5em] text-primary sm:text-4xl"
+        >
+          Prochainement
+        </motion.span>
+        <span className="h-px w-12 bg-primary/40 sm:w-20" />
+      </motion.div>
 
       {/* CTA */}
       <motion.div
-        custom={4}
+        custom={5}
         initial="hidden"
         animate="show"
         variants={fadeUp}

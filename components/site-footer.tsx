@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Globe } from "lucide-react"
+import { MapPin, Phone, Mail } from "lucide-react"
 
 const CONTACTS = [
   {
@@ -19,12 +19,6 @@ const CONTACTS = [
     lines: ["restaurantelparmigiano", "@gmail.com"],
     href: "mailto:restaurantelparmigiano@gmail.com",
   },
-  {
-    icon: Globe,
-    label: "Site web",
-    lines: ["elparmigiano.fr"],
-    href: "https://elparmigiano.fr",
-  },
 ]
 
 export function SiteFooter() {
@@ -34,7 +28,7 @@ export function SiteFooter() {
         <h2 className="mb-10 text-center font-serif text-2xl italic text-primary sm:text-3xl">
           Nous trouver
         </h2>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-3">
           {CONTACTS.map(({ icon: Icon, label, lines, href }) => (
             <a
               key={label}
