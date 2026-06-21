@@ -16,7 +16,7 @@ const CONTACTS = [
   {
     icon: Mail,
     label: "Email",
-    lines: ["restaurantelparmigiano", "@gmail.com"],
+    lines: ["restaurantelparmigiano@gmail.com"],
     href: "mailto:restaurantelparmigiano@gmail.com",
   },
 ]
@@ -54,7 +54,7 @@ export function SiteFooter() {
           ))}
         </div>
         <p className="mt-12 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          El Parmigiano — Cuisine Italienne — Melun
+          El Parmigiano — Cuisine Italienne
         </p>
       </div>
     </footer>

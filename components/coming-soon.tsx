@@ -34,7 +34,7 @@ export function ComingSoon() {
         variants={fadeUp}
         className="animate-flicker mb-8 text-xs uppercase tracking-[0.45em] text-primary sm:text-sm"
       >
-        Ouverture Prochaine · Melun
+        Ouverture Prochaine
       </motion.p>
 
       {/* Logo with radiating glow rings */}
@@ -93,7 +93,7 @@ export function ComingSoon() {
         variants={fadeUp}
         className="mt-10 max-w-xl text-pretty font-serif text-lg italic leading-relaxed text-foreground/90 sm:text-xl"
       >
-        {"Quelque chose de délicieux mijote à Melun. Bientôt, l'Italie s'invite à votre table."}
+        {"Quelque chose de délicieux se prépare. Bientôt, l'Italie s'invite à votre table."}
       </motion.p>
 
       {/* Animated loader */}
