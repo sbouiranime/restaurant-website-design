@@ -2,7 +2,6 @@ const ITEMS = [
   "Cuisine Italienne",
   "Ouverture Prochaine",
   "Fait Maison",
-  "Melun 77000",
   "Pizza au Feu de Bois",
   "Bientôt",
 ]

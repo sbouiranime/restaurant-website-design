@@ -15,9 +15,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'El Parmigiano — Ouverture prochaine à Melun',
+  title: 'El Parmigiano — Ouverture prochaine',
   description:
-    "El Parmigiano arrive bientôt à Melun. Pizza, Panuozzo, El Panino et El Vulcano — la véritable cuisine italienne. Restez à l'écoute pour notre ouverture.",
+    "El Parmigiano arrive bientôt. Pizza, Panuozzo, El Panino et El Vulcano — la véritable cuisine italienne. Restez à l'écoute pour notre ouverture.",
   generator: 'v0.app',
   icons: {
     icon: [
