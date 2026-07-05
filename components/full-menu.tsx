@@ -108,22 +108,23 @@ const MENU_DATA: MenuCategory[] = [
       {
         name: "Panuozzo Classico",
         price: "7€",
-        description: "Mozzarella fraîche, tomate, basilic, huile d'olive vierge extra.",
+        description: "Mozzarella, jambon, roquette, huile d'olive.",
       },
       {
-        name: "Panuozzo Jambon & Roquette",
+        name: "Panuozzo Vegetariano",
+        price: "7€",
+        description: "Mozzarella, aubergines, courgettes, poivrons, champignons frais, roquette.",
+      },
+      {
+        name: "Panuozzo Al Salmone",
         price: "8€",
-        description: "Jambon cru, roquette fraîche, mozzarella, tomate fraîche.",
+        description: "Mozzarella, saumon fumé, tomate cerise, roquette.",
       },
       {
-        name: "Panuozzo Tonno & Pesto",
-        price: "8€",
-        description: "Thon, pesto genovese, mozzarella, tomate, olives.",
-      },
-      {
-        name: "Panuozzo Bufala",
+        name: "Panuozzo Bresaola",
         price: "9€",
-        description: "Mozzarella di Bufala, tomates cerises, basilic frais, réduction balsamique.",
+        description:
+          "Mozzarella, bresaola, roquette, Parmigiano Reggiano, crème de balsamique.",
       },
     ],
   },
@@ -132,21 +133,28 @@ const MENU_DATA: MenuCategory[] = [
     image: "/images/menu-volcano.png",
     items: [
       {
-        name: "El Volcano",
+        name: "El Volcano Escalope",
         price: "7€",
         description:
-          "Escalope de poulet panée, mozzarella fondante, salade fraîche, tomate, mayonnaise maison. Servi dans une demi-pizza chaude.",
+          "Avant cuisson : Escalope panée, mozzarella, oignons rouges. Après cuisson : salade, tomates cerises, sauce maison.",
       },
       {
-        name: "El Volcano Spicy",
-        price: "8€",
+        name: "El Volcano Poulet",
+        price: "7€",
         description:
-          "Escalope de poulet panée, mozzarella fondante, roquette, tomate, sauce sriracha, mayonnaise épicée.",
+          "Avant cuisson : Poulet grillé mariné, mozzarella, oignons rouges. Après cuisson : salade, tomates cerises, sauce maison.",
       },
       {
-        name: "El Volcano Tonno",
-        price: "8€",
-        description: "Escalope de poulet panée, thon, mozzarella, salade fraîche, citron.",
+        name: "El Volcano Thon",
+        price: "7€",
+        description:
+          "Avant cuisson : Thon, mozzarella, oignons rouges, olives noires. Après cuisson : salade, tomates cerises, sauce maison.",
+      },
+      {
+        name: "El Volcano Jambon",
+        price: "7€",
+        description:
+          "Avant cuisson : Jambon de dinde fumé, mozzarella, champignons frais. Après cuisson : salade, tomates cerises, sauce maison.",
       },
     ],
   },
@@ -155,30 +163,30 @@ const MENU_DATA: MenuCategory[] = [
     image: "/images/menu-panino.png",
     items: [
       {
-        name: "El Panino Tonno",
-        price: "5.50€",
-        description: "Thon, mayonnaise, oignons rouges, tomate fraîche, roquette.",
-      },
-      {
-        name: "El Panino Pollo",
-        price: "5.50€",
-        description: "Poulet rôti, salade fraîche, tomate, mayonnaise maison.",
-      },
-      {
-        name: "El Panino Mortadelle",
-        price: "6€",
-        description: "Mortadelle de Bologne, pistachio, mozzarella fraîche, roquette.",
-      },
-      {
-        name: "El Panino Veggie",
-        price: "5.50€",
+        name: "El Panino",
+        price: "5,50€",
         description:
-          "Tomates rôties, aubergines grillées, courgettes, roquette, mozzarella, pesto.",
+          "Choix : Thon (œuf en option), Jambon de dinde fumé, Poulet pané. Crudités au choix (salade, tomate, oignon). Sauces au choix : mayonnaise, ketchup, moutarde, harissa, algérienne, samouraï, sauce maison.",
       },
       {
-        name: "El Panino Prosciutto",
-        price: "6.50€",
-        description: "Jambon de Parme, mozzarella fraîche, roquette, tomate, vinaigre balsamique.",
+        name: "Supplément : Champignons",
+        price: "+1,50€",
+        description: "",
+      },
+      {
+        name: "Supplément : Burrata",
+        price: "+3,00€",
+        description: "",
+      },
+      {
+        name: "Supplément : Œuf",
+        price: "+1,50€",
+        description: "",
+      },
+      {
+        name: "Supplément : Mozzarella",
+        price: "+1,50€",
+        description: "",
       },
     ],
   },
@@ -187,24 +195,19 @@ const MENU_DATA: MenuCategory[] = [
     image: "/images/menu-drinks.png",
     items: [
       {
-        name: "Eau Minérale",
-        price: "2.50€",
-        description: "Plate ou pétillante",
+        name: "Boisson fraîche (33 cl)",
+        price: "1,50€",
+        description: "",
       },
       {
-        name: "Espresso",
-        price: "2€",
-        description: "Classique italien",
+        name: "Bouteille d'eau (50 cl)",
+        price: "1,00€",
+        description: "",
       },
       {
-        name: "Soft Drinks",
-        price: "3€",
-        description: "Coca, Sprite, Fanta",
-      },
-      {
-        name: "Vin Blanc / Rouge",
-        price: "4.50€ verre",
-        description: "Sélection italienne premium",
+        name: "Café",
+        price: "2,00€",
+        description: "",
       },
     ],
   },
@@ -213,60 +216,66 @@ const MENU_DATA: MenuCategory[] = [
     image: "/images/menu-desserts.png",
     items: [
       {
-        name: "Tiramisu",
-        price: "5€",
-        description: "Classique italien avec mascarpone et cacao.",
+        name: "Tiramisu maison",
+        price: "4,50€",
+        description: "",
       },
       {
-        name: "Biscuits Italiens",
-        price: "3€",
-        description: "Amaretti, cantucci, ou biscottis.",
+        name: "Cookie",
+        price: "3,50€",
+        description: "",
       },
       {
-        name: "Pizza Nutella",
-        price: "4.50€",
-        description: "Pâte fraîche, Nutella, sucre cristallisé.",
+        name: "Mini Pizza Nutella",
+        price: "5,50€",
+        description: "",
+      },
+      {
+        name: "Mini Pizza Nutella & Pistache",
+        price: "6,50€",
+        description: "",
       },
     ],
   },
 ]
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.1,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 15 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-}
-
 export function FullMenu() {
   const pizzas = MENU_DATA[0].items
   const otherCategories = MENU_DATA.slice(1)
-  const pizzasFirstHalf = pizzas.slice(0, 6)
-  const pizzasSecondHalf = pizzas.slice(6, 12)
-  const centerPizza = pizzas[12]
+  const pizzasFirstHalf = pizzas.slice(0, 7)
+  const pizzasSecondHalf = pizzas.slice(7, 14)
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  }
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-8">
+    <div className="mx-auto max-w-5xl space-y-20 px-6 py-8">
       {/* Hero Pizza Image spanning full width */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="relative mb-0 h-96 w-full overflow-hidden rounded-t-lg"
+        className="relative h-96 w-full overflow-hidden rounded-lg"
       >
         <Image
           src="/images/menu-pizza.png"
@@ -278,26 +287,24 @@ export function FullMenu() {
         <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/60" />
       </motion.div>
 
-      {/* Pizza Section - Two Column Layout */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-60px" }}
-        variants={containerVariants}
-        className="overflow-hidden rounded-b-lg border-t-0 border border-primary/20 bg-card/40 backdrop-blur pb-8 pt-8"
-      >
-        {/* Title */}
-        <motion.div variants={itemVariants} className="px-6 md:px-8 mb-8">
-          <h2 className="font-serif text-4xl text-primary md:text-5xl">
-            Pizzas Napolitaines
-          </h2>
-          <div className="mt-3 h-1 w-16 bg-gradient-to-r from-primary to-primary/30" />
-        </motion.div>
+      {/* Pizza Section with 7-7 split */}
+      <motion.section className="space-y-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center font-serif text-3xl font-bold text-primary md:text-4xl"
+        >
+          Pizzas Napolitaines
+        </motion.h2>
 
-        {/* Two Column Grid for Pizzas */}
         <motion.div
-          className="grid grid-cols-1 gap-8 px-6 md:grid-cols-2 md:px-8"
           variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 gap-8 md:grid-cols-2"
         >
           {/* Left Column */}
           <div className="space-y-6">
@@ -337,116 +344,77 @@ export function FullMenu() {
             ))}
           </div>
         </motion.div>
-
-        {/* Center Pizza - Signature Item */}
-        {centerPizza && (
-          <motion.div
-            variants={itemVariants}
-            className="mt-10 flex justify-center px-6 md:px-8"
-          >
-            <div className="group max-w-xs text-center">
-              <h3 className="font-serif text-xl text-foreground transition-colors group-hover:text-primary md:text-2xl">
-                {centerPizza.name}
-              </h3>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed md:text-sm">
-                {centerPizza.description}
-              </p>
-              <span className="mt-3 block font-serif text-lg italic text-primary">
-                {centerPizza.price}
-              </span>
-            </div>
-          </motion.div>
-        )}
       </motion.section>
 
       {/* Other Categories */}
-      <div className="space-y-20 mt-20">
-        {otherCategories.map((category, categoryIdx) => (
-          <motion.section
-            key={category.title}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            variants={containerVariants}
-            className="overflow-hidden rounded-lg border border-primary/20 bg-card/40 backdrop-blur"
+      {otherCategories.map((category, categoryIdx) => (
+        <motion.section
+          key={category.title}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: categoryIdx * 0.1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="space-y-8"
+        >
+          <div
+            className={`grid grid-cols-1 gap-8 ${
+              categoryIdx % 2 === 0 ? "md:grid-cols-2" : "md:grid-cols-2"
+            }`}
           >
-            {/* Category Header with Image */}
-            <div className="grid gap-6 md:grid-cols-2">
-              {/* Image */}
-              <motion.div
-                variants={itemVariants}
-                className="relative h-56 overflow-hidden md:h-full md:min-h-96"
-              >
-                <Image
-                  src={category.image}
-                  alt={category.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent" />
-              </motion.div>
+            {/* Category Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className={`relative h-80 w-full overflow-hidden rounded-lg ${
+                categoryIdx % 2 === 1 ? "md:order-2" : ""
+              }`}
+            >
+              <Image
+                src={category.image}
+                alt={category.title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-background/20" />
+            </motion.div>
 
-              {/* Title and Items */}
-              <div className="flex flex-col justify-start gap-8 p-6 md:p-8">
-                <motion.div variants={itemVariants}>
-                  <h2 className="font-serif text-4xl text-primary md:text-5xl">
-                    {category.title}
-                  </h2>
-                  <div className="mt-3 h-1 w-16 bg-gradient-to-r from-primary to-primary/30" />
-                </motion.div>
+            {/* Category Items */}
+            <motion.div
+              className={`space-y-6 ${categoryIdx % 2 === 1 ? "md:order-1" : ""}`}
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-50px" }}
+            >
+              <h2 className="font-serif text-3xl font-bold text-primary md:text-4xl">
+                {category.title}
+              </h2>
 
-                {/* Items Grid */}
-                <motion.div className="space-y-4" variants={containerVariants}>
-                  {category.items.slice(0, 5).map((item) => (
-                    <motion.div key={item.name} variants={itemVariants} className="group">
-                      <div className="flex items-baseline justify-between gap-3">
-                        <h3 className="font-serif text-lg text-foreground transition-colors group-hover:text-primary md:text-xl">
-                          {item.name}
-                        </h3>
-                        <span className="whitespace-nowrap font-serif text-lg italic text-primary">
-                          {item.price}
-                        </span>
-                      </div>
+              <div className="space-y-5">
+                {category.items.map((item) => (
+                  <motion.div key={item.name} variants={itemVariants} className="group">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <h3 className="font-serif text-base text-foreground transition-colors group-hover:text-primary md:text-lg">
+                        {item.name}
+                      </h3>
+                      <span className="whitespace-nowrap font-serif text-base italic text-primary">
+                        {item.price}
+                      </span>
+                    </div>
+                    {item.description && (
                       <p className="mt-1 text-xs text-muted-foreground leading-relaxed md:text-sm">
                         {item.description}
                       </p>
-                    </motion.div>
-                  ))}
-                </motion.div>
+                    )}
+                  </motion.div>
+                ))}
               </div>
-            </div>
-
-            {/* Extended Items (if more than 5) */}
-            {category.items.length > 5 && (
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-40px" }}
-                variants={containerVariants}
-                className="border-t border-primary/10 px-6 py-8 md:px-8"
-              >
-                <motion.div className="space-y-4" variants={containerVariants}>
-                  {category.items.slice(5).map((item) => (
-                    <motion.div key={item.name} variants={itemVariants} className="group">
-                      <div className="flex items-baseline justify-between gap-3">
-                        <h3 className="font-serif text-lg text-foreground transition-colors group-hover:text-primary md:text-xl">
-                          {item.name}
-                        </h3>
-                        <span className="whitespace-nowrap font-serif text-lg italic text-primary">
-                          {item.price}
-                        </span>
-                      </div>
-                      <p className="mt-1 text-xs text-muted-foreground leading-relaxed md:text-sm">
-                        {item.description}
-                      </p>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </motion.div>
-            )}
-          </motion.section>
-        ))}
-      </div>
+            </motion.div>
+          </div>
+        </motion.section>
+      ))}
     </div>
   )
 }
