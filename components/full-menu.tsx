@@ -254,8 +254,8 @@ const itemVariants = {
 export function FullMenu() {
   const pizzas = MENU_DATA[0].items
   const otherCategories = MENU_DATA.slice(1)
-  const pizzasFirstHalf = pizzas.slice(0, 6)
-  const pizzasSecondHalf = pizzas.slice(6)
+  const pizzasFirstHalf = pizzas.slice(0, 7)
+  const pizzasSecondHalf = pizzas.slice(7)
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-8">
