@@ -1,7 +1,7 @@
 import Link from "next/link"
 import type { Metadata } from "next"
 import { MenuHeader } from "@/components/menu-header"
-import { MenuList } from "@/components/menu-list"
+import { FullMenu } from "@/components/full-menu"
 import { Marquee } from "@/components/marquee"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -16,12 +16,8 @@ export default function MenuPage() {
     <main className="bg-background">
       <MenuHeader />
 
-      <section className="px-6 pb-20">
-        <MenuList />
-
-        <p className="mx-auto mt-14 max-w-2xl text-center font-serif text-xl italic text-primary">
-          Et bien d&apos;autres surprises à découvrir sur place...
-        </p>
+      <section className="pb-20">
+        <FullMenu />
 
         <div className="mt-10 flex justify-center">
           <Link
