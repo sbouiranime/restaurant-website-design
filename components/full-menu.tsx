@@ -254,8 +254,9 @@ const itemVariants = {
 export function FullMenu() {
   const pizzas = MENU_DATA[0].items
   const otherCategories = MENU_DATA.slice(1)
-  const pizzasFirstHalf = pizzas.slice(0, 7)
-  const pizzasSecondHalf = pizzas.slice(7)
+  const pizzasFirstHalf = pizzas.slice(0, 6)
+  const pizzasSecondHalf = pizzas.slice(6, 12)
+  const centerPizza = pizzas[12]
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-8">
@@ -336,6 +337,26 @@ export function FullMenu() {
             ))}
           </div>
         </motion.div>
+
+        {/* Center Pizza - Signature Item */}
+        {centerPizza && (
+          <motion.div
+            variants={itemVariants}
+            className="mt-10 flex justify-center px-6 md:px-8"
+          >
+            <div className="group max-w-xs text-center">
+              <h3 className="font-serif text-xl text-foreground transition-colors group-hover:text-primary md:text-2xl">
+                {centerPizza.name}
+              </h3>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed md:text-sm">
+                {centerPizza.description}
+              </p>
+              <span className="mt-3 block font-serif text-lg italic text-primary">
+                {centerPizza.price}
+              </span>
+            </div>
+          </motion.div>
+        )}
       </motion.section>
 
       {/* Other Categories */}
