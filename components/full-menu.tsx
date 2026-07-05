@@ -263,6 +263,24 @@ const itemVariants = {
 export function FullMenu() {
   return (
     <div className="mx-auto max-w-5xl space-y-20 px-6 py-8">
+      {/* Hero Pizza Image spanning full width */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="relative h-96 w-full overflow-hidden rounded-lg"
+      >
+        <Image
+          src="/images/menu-pizza.png"
+          alt="Pizza Hero"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/60" />
+      </motion.div>
+
       {MENU_DATA.map((category, categoryIdx) => (
         <motion.section
           key={category.title}
