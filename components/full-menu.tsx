@@ -7,6 +7,7 @@ interface MenuItem {
   name: string
   price: string
   description: string
+  image?: string
 }
 
 interface MenuCategory {
@@ -25,6 +26,7 @@ const MENU_DATA: MenuCategory[] = [
         price: "10€",
         description:
           "Sauce tomate San Marzano, mozzarella fior di latte, basilic frais, huile d'olive vierge extra.",
+        image: "/images/products/pizza-margherita.png",
       },
       {
         name: "Pizza Marinara",
@@ -36,6 +38,7 @@ const MENU_DATA: MenuCategory[] = [
         price: "12€",
         description:
           "Sauce tomate, mozzarella, jambon, champignons frais, cœurs d'artichauts, olives noires.",
+        image: "/images/products/pizza-capricciosa.png",
       },
       {
         name: "Pizza Al Tonno",
@@ -309,7 +312,17 @@ export function FullMenu() {
           {/* Left Column */}
           <div className="space-y-6">
             {pizzasFirstHalf.map((item) => (
-              <motion.div key={item.name} variants={itemVariants} className="group">
+              <motion.div key={item.name} variants={itemVariants} className="group overflow-hidden rounded-lg border border-primary/20 bg-card/50 p-4 transition-all hover:border-primary/40 hover:bg-card">
+                {item.image && (
+                  <div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                )}
                 <div className="flex items-baseline justify-between gap-3">
                   <h3 className="font-serif text-lg text-foreground transition-colors group-hover:text-primary md:text-xl">
                     {item.name}
@@ -318,7 +331,7 @@ export function FullMenu() {
                     {item.price}
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-muted-foreground leading-relaxed md:text-sm">
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed md:text-sm">
                   {item.description}
                 </p>
               </motion.div>
@@ -328,7 +341,17 @@ export function FullMenu() {
           {/* Right Column */}
           <div className="space-y-6">
             {pizzasSecondHalf.map((item) => (
-              <motion.div key={item.name} variants={itemVariants} className="group">
+              <motion.div key={item.name} variants={itemVariants} className="group overflow-hidden rounded-lg border border-primary/20 bg-card/50 p-4 transition-all hover:border-primary/40 hover:bg-card">
+                {item.image && (
+                  <div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                )}
                 <div className="flex items-baseline justify-between gap-3">
                   <h3 className="font-serif text-lg text-foreground transition-colors group-hover:text-primary md:text-xl">
                     {item.name}
@@ -337,7 +360,7 @@ export function FullMenu() {
                     {item.price}
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-muted-foreground leading-relaxed md:text-sm">
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed md:text-sm">
                   {item.description}
                 </p>
               </motion.div>
