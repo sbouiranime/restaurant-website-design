@@ -2,7 +2,6 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { MenuHeader } from "@/components/menu-header"
 import { FullMenu } from "@/components/full-menu"
-import { Marquee } from "@/components/marquee"
 import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
@@ -29,7 +28,6 @@ export default function MenuPage() {
         </div>
       </section>
 
-      <Marquee />
       <SiteFooter />
     </main>
   )

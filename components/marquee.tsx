@@ -1,9 +1,7 @@
 const ITEMS = [
   "Cuisine Italienne",
-  "Ouverture Prochaine",
   "Fait Maison",
   "Pizza au Feu de Bois",
-  "Bientôt",
 ]
 
 export function Marquee() {

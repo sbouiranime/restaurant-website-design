@@ -34,7 +34,7 @@ export function ComingSoon() {
         variants={fadeUp}
         className="animate-flicker mb-8 text-xs uppercase tracking-[0.45em] text-primary sm:text-sm"
       >
-        Ouverture Prochaine
+        Restaurant Italien
       </motion.p>
 
       {/* Logo with radiating glow rings */}
@@ -93,7 +93,7 @@ export function ComingSoon() {
         variants={fadeUp}
         className="mt-10 max-w-xl text-pretty font-serif text-lg italic leading-relaxed text-foreground/90 sm:text-xl"
       >
-        {"Quelque chose de délicieux se prépare. Bientôt, l'Italie s'invite à votre table."}
+        {"L'Italie s'invite à votre table. Savourez l'authenticité de la cuisine italienne."}
       </motion.p>
 
       {/* Animated loader */}
@@ -105,7 +105,7 @@ export function ComingSoon() {
         className="mt-10 flex w-full max-w-xs flex-col items-center gap-4"
       >
         <span className="font-serif text-2xl uppercase tracking-[0.5em] text-primary sm:text-3xl">
-          Prochainement
+          Bienvenue
         </span>
 
         {/* Indeterminate loading bar */}

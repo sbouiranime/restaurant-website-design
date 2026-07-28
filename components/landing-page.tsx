@@ -90,46 +90,8 @@ export function LandingPage() {
     tiltY.set(0)
   }
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Restaurant',
-    name: 'El Parmigiano',
-    image: '/images/logo.png',
-    url: 'https://elparmigiano.fr',
-    telephone: '+33651475545',
-    email: 'restaurantelparmigiano@gmail.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '1 bis rue Guy Baudoin',
-      addressLocality: 'Melun',
-      postalCode: '77000',
-      addressCountry: 'FR',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 48.5442,
-      longitude: 2.6587,
-    },
-    servesCuisine: ['Italian', 'Pizza', 'Panuozzo'],
-    priceRange: '$$',
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '10:00',
-        closes: '22:00',
-      },
-    ],
-    menu: '/menu',
-    acceptsReservations: 'false',
-  }
-
   return (
     <main className="relative bg-background overflow-hidden">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <ScrollProgress />
       <StickyMiniHeader />
 
@@ -574,8 +536,10 @@ export function LandingPage() {
 
           <div className="grid gap-4 sm:grid-cols-2 max-w-xl mx-auto mb-8">
             {[
-              { day: "Lundi - Samedi", hours: "10h00 - 22h00" },
-              { day: "Dimanche", hours: "Fermé" },
+              { day: "Lundi - Jeudi", hours: "11h00 - 14h30 / 17h30 - 22h00" },
+              { day: "Vendredi - Samedi", hours: "11h00 - 14h30 / 17h30 - 23h00" },
+              { day: "Dimanche", hours: "11h00 - 14h30 / 17h30 - 22h30" },
+              { day: "Mercredi", hours: "Fermé" },
             ].map((item, i) => (
               <motion.div
                 key={i}
