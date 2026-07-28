@@ -30,7 +30,7 @@ export function MenuHeader() {
           transition={{ duration: 0.6 }}
           className="mb-4 text-xs uppercase tracking-[0.45em] text-primary sm:text-sm"
         >
-          En avant-première
+          Notre Menu
         </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
@@ -46,7 +46,7 @@ export function MenuHeader() {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="mx-auto mt-6 max-w-xl text-pretty font-serif text-lg italic text-foreground/90"
         >
-          {"Voici ce qui vous attend dès notre ouverture. Un avant-goût de l'Italie, rien que pour vous."}
+          {"Découvrez nos spécialités italiennes, préparées avec passion et des ingrédients authentiques. De la pizza au feu de bois aux saveurs méditerranéennes."}
         </motion.p>
       </div>
     </header>
